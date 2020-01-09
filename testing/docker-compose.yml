@@ -1,0 +1,17 @@
+version: '3'
+services: 
+
+    jenkinsfile-runner:
+        # image: jenkins4eval/jenkinsfile-runner
+        container_name: jenkinsfile-runner
+        build: 
+            context: ./pipeline
+            dockerfile: Dockerfile
+        volumes: 
+            - ./Jenkinsfile:/workspace/Jenkinsfile
+        restart: always
+
+# networks: 
+#     default:
+#         external: 
+#             name: cicd
