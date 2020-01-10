@@ -91,6 +91,38 @@ then, see the result
 
 **note**: it independent from main service.
 
+```bash
+jenkinsfile-runner    | Started
+jenkinsfile-runner    | Running in Durability level: PERFORMANCE_OPTIMIZED
+jenkinsfile-runner    | [Pipeline] Start of Pipeline
+jenkinsfile-runner    | [Pipeline] node
+jenkinsfile-runner    | Running on Jenkins in /build
+jenkinsfile-runner    | [Pipeline] {
+jenkinsfile-runner    | [Pipeline] stage
+jenkinsfile-runner    | [Pipeline] { (Declarative: Checkout SCM)
+jenkinsfile-runner    | [Pipeline] checkout
+jenkinsfile-runner    | [Pipeline] }
+jenkinsfile-runner    | [Pipeline] // stage
+jenkinsfile-runner    | [Pipeline] stage
+jenkinsfile-runner    | [Pipeline] { (Build)
+jenkinsfile-runner    | GOT CONTEXT FOR Build
+jenkinsfile-runner    | [Pipeline] sh
+jenkinsfile-runner    | + ls
+jenkinsfile-runner    | Dockerfile
+jenkinsfile-runner    | Jenkinsfile
+jenkinsfile-runner    | common.groovy
+jenkinsfile-runner    | instances.json
+jenkinsfile-runner    | [Pipeline] readJSON
+jenkinsfile-runner    | [Pipeline] echo
+jenkinsfile-runner    | 111.111.111.111
+jenkinsfile-runner    | [Pipeline] }
+jenkinsfile-runner    | [Pipeline] // stage
+jenkinsfile-runner    | [Pipeline] }
+jenkinsfile-runner    | [Pipeline] // node
+jenkinsfile-runner    | [Pipeline] End of Pipeline
+jenkinsfile-runner    | Finished: SUCCESS
+```
+
 ## License
 
 MIT license
