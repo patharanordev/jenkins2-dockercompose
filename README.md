@@ -1,4 +1,7 @@
-# Jenkins2 + Docker Compose
+# Jenkins + Docker Compose
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Version](https://img.shields.io/badge/Jenkins-2-orange.svg)]()
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A8YE92K9QM7NA)
 
 ## Start service
 
@@ -68,6 +71,25 @@ After that, enjoy!!!
 ## Official Jenkins Docker image
 
 https://github.com/jenkinsci/docker/blob/master/README.md
+
+## Testing pipeline with Jenkinsfile runner
+
+Please refer to `./testing/`.
+
+I have created sample pipeline to test multi-instances deployment by focusing on :
+
+ - Import `JSON` data object from `JSON` file (`./testing/pipeline/instances.json`).
+ - Looping the `JSON` data object array.
+
+The testing service using Jenkinsfile runner to interpret `Jenkinsfile`(`./testing/Jenkinsfile`). It has already composed by Docker compose(`./testing/docker-compose.yml`). You just write your pipeline and run command below to interpret it.
+
+```bash
+$ docker-compose up --build
+```
+
+then, see the result
+
+**note**: it independent from main service.
 
 ## License
 
